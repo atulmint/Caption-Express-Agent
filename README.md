@@ -37,8 +37,7 @@ The add-on focuses on:
 - **LinkedIn** – Professional, polished captions
 
 ### Instant Caption Generation
-Automatically generates platform-optimized captions from your content.  
-Select your platform and tone—Instagram hooks, YouTube SEO, or LinkedIn polish—without manual prompt writing.
+Caption Express Agent analyzes your content and generates platform-optimized captions instantly. Choose your platform and tone—Instagram hooks, YouTube SEO, or LinkedIn polish. No prompt engineering.
 
 ---
 
