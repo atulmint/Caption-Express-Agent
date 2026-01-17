@@ -1,0 +1,42 @@
+{
+  "id": "captioncraft-ai",
+  "name": "CaptionCraft AI",
+  "version": "1.0.0",
+  "manifestVersion": 2,
+  "requirements": {
+    "apps": [
+      {
+        "name": "Express",
+        "apiVersion": 1
+      }
+    ]
+  },
+  "entryPoints": [
+    {
+      "type": "panel",
+      "id": "panel1",
+      "label": {
+        "default": "CaptionCraft AI"
+      },
+      "main": "index.html",
+      "documentSandbox": "code.js",
+      "permissions": {
+        "sandbox": ["allow-popups", "allow-downloads"]
+      }
+    }
+  ],
+  "icons": [
+    {
+      "width": 24,
+      "height": 24,
+      "href": "assets/icon-24.png",
+      "theme": ["all"]
+    },
+    {
+      "width": 48,
+      "height": 48,
+      "href": "assets/icon-48.png",
+      "theme": ["all"]
+    }
+  ]
+}
