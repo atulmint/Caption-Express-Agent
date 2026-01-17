@@ -1,4 +1,4 @@
-# CaptionCraft AI - Adobe Express Add-On
+# Caption Express Agent - Adobe Express Add-On
 
 > AI-powered social media caption generator that uses Gemini for content understanding and GPT for caption generation.
 
