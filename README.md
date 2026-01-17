@@ -36,7 +36,9 @@ The add-on focuses on:
 - **YouTube** – Clear and descriptive captions
 - **LinkedIn** – Professional, polished captions
 
-(Uses original platform logos without modification)
+### Instant Caption Generation
+Automatically generates platform-optimized captions from your content.  
+Select your platform and tone—Instagram hooks, YouTube SEO, or LinkedIn polish—without manual prompt writing.
 
 ---
 
@@ -207,8 +209,10 @@ MIT License - feel free to modify and distribute!
 ## 🙏 Acknowledgments
 
 - Built with the [Adobe Express Add-on SDK](https://developer.adobe.com/express/add-ons/)
-- AI powered by [Google Gemini](https://ai.google.dev/) and [OpenAI GPT](https://openai.com/)
-- UI components from [Spectrum Web Components](https://opensource.adobe.com/spectrum-web-components/)
+- contentReference[oaicite:0]{index=0}** for providing high-performance AI inference and enabling fast,       low-latency caption generation using LLaMA models.
+- Lucide React for clean, minimal iconography aligned with modern UI standards.
+- Adobe Spectrum Design System for UI/UX inspiration and design consistency.
+
 
 ---
 
