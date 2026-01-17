@@ -2,55 +2,95 @@
 
 > AI-powered social media caption generator that uses Gemini for content understanding and GPT for caption generation.
 
-![CaptionCraft AI](https://img.shields.io/badge/Adobe%20Express-Add--on-FF0000?style=for-the-badge&logo=adobe)
-![React](https://img.shields.io/badge/React-18.2-61DAFB?style=for-the-badge&logo=react)
-![TypeScript](https://img.shields.io/badge/TypeScript-5.2-3178C6?style=for-the-badge&logo=typescript)
+# Caption Express Agent
+
+AI-powered social media caption generator built as an **Adobe Express Add-on**, designed to create clean, platform-optimized captions with a native Adobe-style UI.
+
+![Adobe Express](https://img.shields.io/badge/Adobe%20Express-Add--on-FF0000?style=for-the-badge&logo=adobe)
+![React](https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript)
+![Groq](https://img.shields.io/badge/Groq-API-000000?style=for-the-badge)
+
+---
+
+## ✨ Overview
+
+**Caption Express Agent** helps creators, marketers, and designers instantly generate high-quality social media captions directly inside **Adobe Express**.
+
+The add-on focuses on:
+- Adobe Express–native UI/UX
+- Fast caption generation using **Groq-powered LLaMA models**
+- Platform-specific tone and formatting
+- Clean, minimal, professional design (no AI gimmicks)
+
+---
 
 ## 🚀 Features
 
-### Input Sources
-- **Text Input**: Describe your content, product, or idea
-- **PDF Upload**: Extract content from PDF documents
-- **Image Upload**: AI analyzes images to understand context
+### Input Types
+- **Text Input** – Describe your content, event, product, or idea
+- **Image Upload** – Use images as creative context for captions
 
-### Platform-Specific Captions
-- **Instagram**: Engaging captions with hashtags (5-10 per post)
-- **YouTube**: SEO-optimized descriptions
-- **LinkedIn**: Professional thought leadership content
+### Supported Platforms
+- **Instagram** – Engaging captions with relevant hashtags
+- **YouTube** – Clear and descriptive captions
+- **LinkedIn** – Professional, polished captions
+
+(Uses original platform logos without modification)
+
+---
 
 ### Tone Options
-- **Professional**: Clear, authoritative language
-- **Fun**: Light-hearted, playful content
-- **GenZ**: Trendy slang and meme culture
-- **Motivational**: Inspiring and empowering
+- **Pro** – Professional and brand-safe
+- **Fun** – Light and engaging
+- **GenZ** – Casual and trendy
+- **Motivational** – Inspiring and positive
+
+---
 
 ### Language Support
-- **English**: Standard modern English
-- **Hinglish**: Hindi-English mix popular in India
+- **English**
+- **Hinglish** (Hindi + English mix)
 
-### AI Pipeline
-1. **Gemini API**: Extracts and summarizes content into 3-5 key bullet points
-2. **GPT API**: Generates platform-optimized captions with:
-   - 3 unique caption variations
-   - 2 hook lines per caption
-   - 1 call-to-action
-   - Relevant hashtags (for Instagram)
+---
 
-### Adobe Express Integration
-- **One-click insert**: Add captions directly to your design canvas
-- **Copy to clipboard**: Quick copy for use elsewhere
-- **Regenerate**: Get new variations instantly
+## 🧠 AI Architecture
 
-## 📦 Installation
+The add-on uses a **Groq-powered LLaMA model pipeline** for fast and reliable caption generation.
+
+- **Groq API**
+  - Model: `llama-3.1-8b-instant`
+- Optimized for:
+  - Low latency
+  - Clean, human-like outputs
+  - Real-time usage inside Adobe Express
+
+> No Gemini or OpenAI APIs are used in the current version.
+
+---
+
+## 🎨 UI & UX Principles
+
+- Designed to visually match **Adobe Express**
+- White + mint color theme
+- Minimal Lucide icons
+- Subtle black hover states
+- Clear spacing and typography
+- Emoji usage kept minimal and optional
+
+---
+
+## 📦 Installation & Development (All Steps)
 
 ### Prerequisites
-- Node.js 18+ 
+- Node.js 18+
 - npm or yarn
-- Adobe Express account (for testing)
-- Gemini API key ([Get one here](https://makersuite.google.com/app/apikey))
-- OpenAI API key ([Get one here](https://platform.openai.com/api-keys))
+- Adobe Express account (Developer Mode enabled)
+- Groq API key → https://console.groq.com
 
-### Setup
+---
+
+### Setup & Run
 
 1. **Clone/Download the project**
    ```bash
@@ -83,24 +123,41 @@
 
 ### Project Structure
 ```
-captioncraft-ai/
+AUTO CAPTION/
+├── dist/
+│   ├── assets/
+│   ├── code.js
+│   ├── index.html
+│   ├── index.js
+│   └── manifest.json
+├── icon/
+│   ├── fun.jpg
+│   ├── genz.jpg
+│   ├── motive.png
+│   └── pro.jpg
+├── node_modules/
 ├── src/
-│   ├── ui/
-│   │   ├── index.tsx      # React entry point
-│   │   ├── App.tsx        # Main application component
-│   │   └── styles.css     # Custom styling
+│   ├── assets/
 │   ├── sandbox/
-│   │   └── code.ts        # Document sandbox (text insertion)
+│   │   └── code.ts
 │   ├── services/
-│   │   ├── geminiService.ts  # Gemini API integration
-│   │   └── gptService.ts     # OpenAI GPT integration
+│   │   ├── geminiService.ts   (legacy / unused)
+│   │   └── gptService.ts      (legacy / unused)
 │   ├── types/
-│   │   └── index.ts       # TypeScript type definitions
-│   └── assets/            # Add-on icons
-├── manifest.json          # Adobe Express add-on manifest
+│   │   ├── adobe-sdk.d.ts
+│   │   └── index.ts
+│   └── ui/
+│       ├── App.tsx
+│       ├── index.tsx
+│       └── styles.css
+├── index.html
+├── manifest.json
 ├── package.json
+├── package-lock.json
 ├── tsconfig.json
-└── webpack.config.js
+├── webpack.config.js
+└── README.md
+
 ```
 
 ### Available Scripts
@@ -142,23 +199,6 @@ API keys are securely stored using Adobe Express's client storage API, which per
 - No data is stored on external servers
 - All communication uses HTTPS
 
-## 🐛 Troubleshooting
-
-### "Could not extract sufficient text from PDF"
-- The PDF may be image-based (scanned). Try using the image upload instead, or copy-paste the text directly.
-
-### "Gemini API error"
-- Check your API key is valid
-- Ensure you have quota remaining
-- The fallback will use GPT-only mode with text input
-
-### "Failed to insert text"
-- Make sure you have a design open in Adobe Express
-- Try refreshing the page and reloading the add-on
-
-### Captions aren't appearing in the design
-- Check if you're on an artboard/page
-- The text is inserted at 10% from left, 40% from top by default
 
 ## 📄 License
 
